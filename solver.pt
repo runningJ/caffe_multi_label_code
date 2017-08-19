@@ -1,0 +1,16 @@
+train_net: "models/imagenet_train.pt"
+test_net:"models/imagenet_val.pt"
+test_iter: 20
+test_interval: 200
+test_initialization:false
+base_lr: 0.0001
+lr_policy: "fixed"
+#gamma: 0.1
+#stepsize: 100
+display: 200
+max_iter: 5000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 1000
+snapshot_prefix: "models/clothesenet_train"
+solver_mode: GPU
