@@ -47,6 +47,7 @@ class multilabel(caffe.Layer):
         for i in range(1,label_numbers):
             top[i].reshape(par.batchsize_dic[self.phase],1)
         self.batchloader=Batchloader(par.data_label_dic[self.phase][0],par.data_label_dic[self.phase][1])
+        self.set_queue();
         print "---------------------inilialized %s----------------"%(self.phase,)
 
     def set_queue(self):
